@@ -1,0 +1,11 @@
+.vscode
+__pycache__
+*.pth
+logs
+models
+results
+*.jpg
+archived
+.txt
+mujoco-maze
+test_result

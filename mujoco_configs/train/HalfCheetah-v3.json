@@ -1,0 +1,51 @@
+{
+    "common": {
+        "log_interval": 20,
+        "tau": 0.005,
+        "beta1": 0.9,
+        "beta2": 0.999,
+        "beta": 0.0,
+        "gamma": 0.99,
+        "updates_per_step": 1,
+        "target_update_interval": 1,
+        "seed": 123,
+        "cuda": true,
+        "disc_batch_size": 200,
+        "policy": "Gaussian",
+        "num_modes": 10,
+        "start_steps": 20000,
+        "algo": "sac",
+        "schedule": "random"
+    },
+    "env": {
+        "scenario": "HalfCheetah-v3",
+        "num_episodes": 10000,
+        "max_episode_len": 200,
+        "hidden_dim": 256,
+        "buffer_limit": 10000000
+    },
+    "sac": {
+        "critic_lr": 0.0003,
+        "policy_lr": 0.0003,
+        "alpha": 0.2,
+        "automatic_entropy_tuning": false,
+        "batch_size": 128
+    },
+    "diayn": {
+        "reward_scale": 1.0,
+        "disc_lr": 0.002
+    },
+    "dads": {
+        "reward_scale": 10.0,
+        "disc_lr": 0.0003,
+        "pred_lr": 0.0003,
+        "contrastive_samples": 100
+    },
+    "wurl":{
+        "reward_scale": 10.0,
+        "disc_lr": 0.002,
+        "sr_algo": "apwd",
+        "amortized": true,
+        "reward_episode_scale": true
+    }
+}
